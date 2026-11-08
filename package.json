@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "node tests/test_runner.js",
+    "deploy": "npm run build && powershell -Command \"Push-Location dist; git init; git config user.name raisahuriya00; git add -A; git commit -m 'deploy: bundle'; git push -f origin HEAD:gh-pages; Pop-Location; Remove-Item dist\\.git -Recurse -Force\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
