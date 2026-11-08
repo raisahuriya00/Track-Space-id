@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 import { AppShell } from './AppShell';
 import { ProtectedRoute } from '@/features/auth/ProtectedRoute';
 import { LoginPage } from '@/features/auth/LoginPage';
@@ -18,7 +18,7 @@ import { GlobalMyTasksPage } from '@/features/tasks/GlobalMyTasksPage';
 import { GlobalCalendarPage } from '@/features/calendar/GlobalCalendarPage';
 import { SettingsPage } from '@/features/settings/SettingsPage';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/login',
     element: <LoginPage />,
